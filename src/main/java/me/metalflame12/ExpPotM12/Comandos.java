@@ -11,32 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 
 public class Comandos implements CommandExecutor{
-/**
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("exppot")){
-            Player p = (Player) sender;
-            if(args.length==0){
-                int lvl = p.getLevel();
-                String lvls = "";
-                lvls = String.valueOf(lvl).substring(lvls.length()-1,lvls.length());
-                if(lvls.equals("5")) {
-                    int lvlu = Integer.parseInt(lvls); //lvls(string) para lvlu(int)
-                    ItemStack exppot = new ItemStack(org.bukkit.Material.EXP_BOTTLE);
-                    ItemMeta meta = exppot.getItemMeta();
-                    ArrayList<String> lore = new ArrayList<String>();
 
-                    lore.add("§a" + lvlu + " Levels!");
-                    lore.add("§aUse para ter o Exp de volta.");
-                    meta.setLore(lore);
-                    exppot.setItemMeta(meta);
-                    p.getInventory().addItem(exppot);
-                    p.setLevel(lvl);
-                }
-            }
-        }
-        return false;
-    }
-    **/
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (cmd.getName().equalsIgnoreCase("exppot")) {
             Player p = (Player) sender;

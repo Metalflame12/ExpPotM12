@@ -7,11 +7,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-
 public class Main extends JavaPlugin {
 
-    public static Main m;
-    public static FileConfiguration cf;
+    private static Main m; // Não sei o que isso tem de diferente com o "instancia"
+    private static FileConfiguration cf;
     private static Main instancia;
 
 
@@ -24,17 +23,9 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new Eventos(), this);
         Comandos();
 
-        if (new File(getDataFolder(), "config.yml").exists()) {
-        } else {
+        if (!(new File(getDataFolder(), "config.yml").exists())) {
             saveResource("config.yml", false);
         }
-
-
-        if (new File(getDataFolder(), "reports.yml").exists()) {
-        } else {
-            saveResource("reports.yml", false);
-        }
-
     }
 
     @Override
@@ -42,7 +33,7 @@ public class Main extends JavaPlugin {
         HandlerList.unregisterAll(this);
     }
 
-    public void Comandos(){
+    private void Comandos(){
         getCommand("exppot").setExecutor(new Comandos());
     }
 }

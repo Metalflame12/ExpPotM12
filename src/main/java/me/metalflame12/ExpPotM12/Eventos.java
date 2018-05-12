@@ -11,9 +11,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 
-/**
- * Created by lucas on 11/05/2017.
- */
 public class Eventos implements Listener {
 
     @EventHandler
