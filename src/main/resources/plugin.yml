@@ -5,4 +5,4 @@ main: me.metalflame12.ExpPotM12.Main
 
 commands:
   exppot:
-    description: Cria uma frasco aaaaaaaaaaaaaaaaaaaa de Exp usando o Exp do player
+    description: Cria uma frasco de Exp usando o Exp do player
