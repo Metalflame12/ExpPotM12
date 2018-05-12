@@ -1,6 +1,6 @@
 name: ExpPotM12
 version: 1.0
-authors: [Metalflame12,Julinho12]
+author: Metalflame12
 main: me.metalflame12.ExpPotM12.Main
 
 commands:
