@@ -27,7 +27,7 @@ public class Eventos implements Listener {
                         int lvlint = Integer.parseInt(lore.get(0).replace("§aLevel: ", ""));
                         int plvl = p.getLevel();
                         p.setLevel(plvl + lvlint);
-                        p.sendMessage("§aVocê usou uma ExpPot, foi adicionado " + lvlint + " no seu Exp total.");
+                        p.sendMessage("§aVocê usou uma ExpPot! Foi adicionado " + lvlint + " no seu Exp total.");
                         exppot.setAmount(exppot.getAmount() -1);
                     }
                 }
