@@ -1,0 +1,48 @@
+package me.metalflame12.ExpPotM12;
+
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.HandlerList;
+import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
+
+
+public class Main extends JavaPlugin {
+
+    public static Main m;
+    public static FileConfiguration cf;
+    private static Main instancia;
+
+
+    @Override
+    public void onEnable() {
+        m = Main.this;
+        cf = getConfig();
+        instancia = this;
+
+        Bukkit.getPluginManager().registerEvents(new Eventos(), this);
+        Comandos();
+
+        if (new File(getDataFolder(), "config.yml").exists()) {
+        } else {
+            saveResource("config.yml", false);
+        }
+
+
+        if (new File(getDataFolder(), "reports.yml").exists()) {
+        } else {
+            saveResource("reports.yml", false);
+        }
+
+    }
+
+    @Override
+    public void onDisable() {
+        HandlerList.unregisterAll(this);
+    }
+
+    public void Comandos(){
+        getCommand("exppot").setExecutor(new Comandos());
+    }
+}

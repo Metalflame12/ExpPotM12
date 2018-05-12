@@ -1,0 +1,8 @@
+name: ExpPotM12
+version: 1.0
+author: Metalflame12
+main: me.metalflame12.ExpPotM12.Main
+
+commands:
+  exppot:
+    description: Cria uma ExpPot usando o Exp do player
