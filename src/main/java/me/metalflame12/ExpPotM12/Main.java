@@ -9,7 +9,7 @@ import java.io.File;
 
 public class Main extends JavaPlugin {
 
-    private static Main m; // Não sei o que isso tem de diferente com o "instancia"
+    private static Main m; 
     private static FileConfiguration cf;
     private static Main instancia;
 
