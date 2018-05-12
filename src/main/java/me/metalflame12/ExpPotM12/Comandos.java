@@ -22,7 +22,7 @@ public class Comandos implements CommandExecutor{
                         ItemMeta meta = exppot.getItemMeta();
                         ArrayList<String> lore = new ArrayList<String>();
                         lore.add("§aLevel: " + lvl);
-                        lore.add("§aUse para par ter o Exp de volta!");
+                        lore.add("§aUse para ter o Exp de volta!");
                         meta.setLore(lore);
                         exppot.setItemMeta(meta);
                         p.getInventory().addItem(exppot);
